@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: rgba(237, 237, 237, 0.413);
+}
+body nav {
+  background-color: white;
+  box-shadow: 1px 2px 10px rgb(211, 211, 211);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
+}
+body nav .logo {
+  margin-left: 15px;
+  margin-top: 4px;
+  padding: 4px;
+  width: 50px;
+  height: 50px;
+}
+body nav input {
+  display: none;
+}
+body nav label img {
+  width: 30px;
+  margin: 20px;
+}
+body nav .menu {
+  list-style-type: none;
+  position: absolute;
+  top: 100%;
+  right: 0%;
+  height: 100px;
+}
+body nav .menu div {
+  flex-basis: 100%;
+  overflow: hidden;
+  background-color: white;
+}
+body nav .menu div li {
+  padding: 20px 40px;
+}
+body nav .menu div li img {
+  height: 25px;
+  filter: grayscale(100%) brightness(50%);
+}
+body nav .menu div li p {
+  width: 80px;
+  display: inline-block;
+  font-family: "Montserrat", sans-serif;
+}
+body nav .accountUser {
+  padding: 4px;
+  margin: 13px 10px 8px 10px;
+  width: 40px;
+  height: 40px;
+}
+
+input:checked ~ .menu div {
+  max-height: unset;
+}
+
+input:checked ~ .menu .accountUser {
+  max-height: unset;
+}
+
+.menu div li:hover {
+  height: 26px;
+  cursor: pointer;
+  background-color: rgb(212, 212, 212);
+  border-bottom: 4px rgb(38, 106, 252) solid;
+  color: #0f7aeb;
+  transition: all 0.1s;
+}
+.menu div li:hover img {
+  filter: grayscale(0%);
+}
+
+.accountUser:hover {
+  cursor: pointer;
+  width: 43px;
+  height: 43px;
+  filter: brightness(80%);
+  transition: all 0.3s;
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    background-color: rgba(245, 245, 245, 0.568);
+  }
+  body nav label {
+    display: none;
+    height: 50%;
+    position: relative;
+  }
+  body nav .menu {
+    top: 0%;
+    right: 28%;
+  }
+  body nav .menu div {
+    flex-basis: 20%;
+    display: block;
+    overflow: unset;
+    display: flex;
+  }
+  body nav .menu div li p {
+    display: none;
+  }
+}
+@media screen and (max-width: 600px) {
+  .menu div {
+    max-height: 0px;
+    box-shadow: #ccc 1px 2px 6px;
+  }
+}
+form {
+  margin: 8px;
+  margin-top: 20px;
+  text-align: center;
+  padding: 5px;
+}
+form #border {
+  display: inline-block;
+  border: #e0e0e0 1px solid;
+  padding: 10px 50px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: rgba(204, 204, 204, 0.539) 1px 2px 10px;
+}
+form label {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+form div input, form textarea {
+  font-family: sans-serif;
+  padding: 4px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #e1e7f0;
+  border: 1px none #0f7aeb;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: #ccc 1px 2px 7px;
+  margin: 6px;
+}
+form textarea {
+  width: 300px;
+  height: 30px;
+}
+
+#submitBtn {
+  background-color: #2785ea;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  padding: 4px;
+}
+
+#submitBtn:hover {
+  cursor: pointer;
+  filter: brightness(80%);
+  transition: 0.3s;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 15px;
+  right: 5%;
+  left: 5%;
+  justify-content: center;
+  margin: 22px;
+}
+.container div {
+  margin: 5px;
+  padding: 5px 6px 15px 6px;
+  border: #ececec 1px solid;
+  background-color: white;
+}
+.container div img {
+  width: 260px;
+  height: 260px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 100% 0;
+     object-position: 100% 0;
+}
+
+body .container div:hover img {
+  filter: brightness(60%) blur(0.5px);
+  -webkit-animation-name: transitionBlur;
+          animation-name: transitionBlur;
+  -webkit-animation-duration: 0.2s;
+          animation-duration: 0.2s;
+}
+
+@-webkit-keyframes transitionBlur {
+  0% {
+    filter: blur(0.1px) brightness(100%);
+  }
+  50% {
+    filter: blur(0.3px) brightness(80%);
+  }
+  100% {
+    filter: blur(0.5px) brightness(60%);
+  }
+}
+
+@keyframes transitionBlur {
+  0% {
+    filter: blur(0.1px) brightness(100%);
+  }
+  50% {
+    filter: blur(0.3px) brightness(80%);
+  }
+  100% {
+    filter: blur(0.5px) brightness(60%);
+  }
+}/*# sourceMappingURL=project1.css.map */
